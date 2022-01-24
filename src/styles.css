@@ -50,3 +50,7 @@
 .stats {
 	list-style: none;
 }
+
+.footer {
+	font-size: smaller;
+}
