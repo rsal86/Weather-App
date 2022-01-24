@@ -1,0 +1,52 @@
+.search-bar {
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	padding: 50px 20px 10px 20px;
+}
+
+.button {
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	padding: 5px 15px;
+	border: 1px solid black;
+	border-radius: 30px;
+}
+
+#city {
+	font-size: 45px;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	padding: 5px 5px 5px 5px;
+}
+
+#temp {
+	font-size: 50px;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	padding: 5px 5px 5px 5px;
+}
+
+.descHighLow {
+	font-size: 24px;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	padding: 5px 5px 5px 5px;
+}
+
+.current {
+	list-style: none;
+	padding: 0;
+}
+
+.cityDateTime {
+	list-style: none;
+}
+
+.stats {
+	list-style: none;
+}
