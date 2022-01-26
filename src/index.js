@@ -14,7 +14,7 @@ function showTemperature(response) {
 	currentCity.innerHTML = `${city}`;
 
 	let currentTemp = document.querySelector("#temp");
-	currentTemp.innerHTML = `${temperature}°F`;
+	currentTemp.innerHTML = `${temperature}`;
 
 	let currentDescription = document.querySelector("#description");
 	currentDescription.innerHTML = `${description}`;
