@@ -32,26 +32,32 @@
 	display: block;
 }
 
+#description {
+	font-size: 16px;
+	margin: 10px;
+	display: inline;
+}
+
 #precipitaion {
 	font-size: 16px;
 	margin: 10px;
-	display: inline-block;
+	display: inline;
 }
 
 #humidity {
 	font-size: 16px;
 	margin: 10px;
-	display: inline-block;
+	display: block;
 }
 
 #wind {
 	font-size: 16px;
 	margin: 10px;
-	display: inline-block;
+	display: block;
 }
 
 .tempContainer {
-	font-size: 60px;
+	font-size: 80px;
 	text-align: center;
 	margin: 0 auto;
 	display: block;
