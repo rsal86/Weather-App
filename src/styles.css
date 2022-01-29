@@ -31,6 +31,7 @@
 
 #city {
 	font-size: 38px;
+	color: #5585b5;
 	margin: 010px auto;
 	display: block;
 	font-family: "Roboto Condensed", sans-serif;
@@ -39,36 +40,42 @@
 
 #date {
 	font-size: 25px;
+	color: #5585b5;
 	margin: 0 auto;
 	display: block;
 }
 
 #description {
 	font-size: 16px;
+	color: #53a8b6;
 	margin: 10px;
 	display: block;
 }
 
 #precipitaion {
 	font-size: 16px;
+	color: #53a8b6;
 	margin: 10px;
 	display: block;
 }
 
 #humidity {
 	font-size: 16px;
+	color: #53a8b6;
 	margin: 10px;
 	display: block;
 }
 
 #wind {
 	font-size: 16px;
+	color: #53a8b6;
 	margin: 10px;
 	display: block;
 }
 
 .tempContainer {
 	font-size: 80px;
+	color: #5585b5;
 	text-align: center;
 	margin: 0 auto;
 	display: block;
