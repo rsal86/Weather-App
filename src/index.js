@@ -1,3 +1,28 @@
+let now = new Date();
+let currentDate = document.querySelector("#date");
+
+let date = now.getDate();
+let hours = now.getHours();
+let minutes = now.getMinutes();
+let year = now.getFullYear();
+let months = [
+	"January",
+	"Febuary",
+	"March",
+	"April",
+	"May",
+	"June",
+	"July",
+	"August",
+	"September",
+	"October",
+	"November",
+	"December",
+];
+let month = months[now.getMonth()];
+
+currentDate.innerHTML = `${month} ${date}, ${year}`;
+
 function showTemperature(response) {
 	console.log(response.data);
 	let city = response.data.name;
