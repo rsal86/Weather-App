@@ -16,72 +16,53 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="search-bar">
-				<form id="search-city">
-					<input
-						type="search"
-						id="search-city-input"
-						placeholder="Enter a City"
-					/>
-					<input type="submit" value="Search" />
-				</form>
-				<button class="button">Current Location</button>
-			</div>
+			<div class="weather-app">
+				<div class="search-bar">
+					<form id="search-city">
+						<input
+							type="search"
+							id="search-city-input"
+							placeholder="Enter a City"
+						/>
+						<input type="submit" value="Search" />
+					</form>
+					<br />
+					<button class="button">Current Location</button>
+				</div>
 
-			<div class="weatherInfo">
-				<div class="row">
-					<div class="col-6">
-						<ul class="listOne">
-							<li id="city">Las Vegas</li>
-							<li id="date">January 25, 2022</li>
-							<li id="description">cloudy</li>
-							<li id="precipitaion">Precipitaion: 24%</li>
-							<li id="humidity">Humidity: 57%</li>
-							<li id="wind">Wind: 20 mph</li>
-						</ul>
-					</div>
-					<div class="col-6">
-						<div class="tempContainer">
-							<div>
-								<span id="temp">39</span>
-								<span id="unit">°f</span>
-								<br />
-								<div class="descHighLow">
-									<span id="current-high">52</span>
-									<span id="current-low">31</span>
+				<div class="weatherInfo">
+					<div class="row">
+						<div class="col-6">
+							<ul class="listOne">
+								<li id="city">Las Vegas</li>
+								<li id="date">January 25, 2022</li>
+								<li id="description">Cloudy</li>
+								<li id="precipitaion">Precipitaion: 24%</li>
+								<li id="humidity">Humidity: 57%</li>
+								<li id="wind">Wind: 20 mph</li>
+							</ul>
+						</div>
+						<div class="col-6">
+							<div class="tempContainer">
+								<div>
+									<span id="temp">39</span>
+									<span id="unit">°f</span>
+									<br />
+									<div class="descHighLow">
+										<span id="current-high">52</span>
+										<span id="current-low">31</span>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				<footer>
+					<a href="https://github.com/rsal86/Weather-App.git "
+						>Open Source Code</a
+					>, by Riza Garcia
+				</footer>
 			</div>
-
-			<h2 id="temp">Enjoy!</h2>
-		</div>
-
-		<div class="row">
-			<div class="col-3 id:">
-				<ul></ul>
-			</div>
-			<div class="row">
-				<div class="col">Monday</div>
-				<div class="col">Tues</div>
-				<div class="col">Wed</div>
-				<div class="col">Thurs</div>
-				<div class="col">Fri</div>
-			</div>
-			<div class="row">
-				<div class="col">H:48°<br />L:35°</div>
-				<div class="col">H:43°<br />L:32°</div>
-				<div class="col">H:42°<br />L:29°</div>
-				<div class="col">H:45°<br />L:36°</div>
-				<div class="col">H:48°<br />L:35°</div>
-			</div>
-			<br />
-			<footer>
-				<a href="https://github.com/rsal86/Weather-App.git ">Open Source Code</a
-				>, by Riza Garcia
-			</footer>
 		</div>
 		<script src="src/index.js"></script>
 	</body>
