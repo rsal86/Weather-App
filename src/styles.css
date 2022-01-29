@@ -105,8 +105,8 @@
 	list-style: none;
 }
 
-.footer {
-	font-size: smaller;
+.codeLink {
+	font-size: 10px;
 	margin: 0 auto;
 	text-align: center;
 	display: block;
