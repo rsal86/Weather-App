@@ -4,7 +4,7 @@
 	border: 1px solid #5585b5;
 	padding: 20px;
 	border-radius: 10px;
-	background-color: #bbe4e9;
+	background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .search-bar {
