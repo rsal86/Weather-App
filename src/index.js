@@ -84,8 +84,16 @@ function search(event) {
 	axios.get(apiUrl).then(showTemperature);
 }
 
+function showCelsiusTemp(event) {
+	event.preventDefault();
+	alert("link clicked");
+}
+
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", search);
 
 let button = document.querySelector("button");
 button.addEventListener("click", getCurrentPosition);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemp);
