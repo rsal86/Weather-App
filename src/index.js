@@ -7,7 +7,7 @@ let minutes = now.getMinutes();
 let year = now.getFullYear();
 let months = [
 	"January",
-	"Febuary",
+	"February",
 	"March",
 	"April",
 	"May",
@@ -91,18 +91,17 @@ function search(event) {
 	axios.get(apiUrl).then(showTemperature);
 }
 
-function showCelsiusTemperature(event) {
+function convertCelsius(event) {
 	event.preventDefault();
-	let celsiusTemperature = ((14 - 32) * 5) / 9;
+	let celsiusTemperature = ((currentTemp - 32) * 5) / 9;
 	let currentTemp = document.querySelector("#temp");
-	currentTemp.innerHTML = celsiusTemperature;
+	currentTemp.innerHTML = Math.round(celsiusTemperature);
 }
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertCelsius);
 
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", search);
 
 let button = document.querySelector("button");
 button.addEventListener("click", getCurrentPosition);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showCelsiusTemperature);
