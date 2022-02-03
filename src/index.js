@@ -33,6 +33,8 @@ function showTemperature(response) {
 	let humidity = Math.round(response.data.main.humidity);
 	let wind = Math.round(response.data.wind.speed);
 
+	fahrenheitTemperature = response.data.main.temp;
+
 	console.log(response.data.main.temp);
 
 	let currentCity = document.querySelector("#city");
@@ -98,11 +100,13 @@ function convertCelsius(event) {
 	tempElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertCelsius);
+let fahrenheitTemperature = null;
 
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", search);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertCelsius);
 
 let button = document.querySelector("button");
 button.addEventListener("click", getCurrentPosition);
