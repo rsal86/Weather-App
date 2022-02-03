@@ -93,15 +93,13 @@ function search(event) {
 
 function convertCelsius(event) {
 	event.preventDefault();
-	let celsiusTemperature = ((currentTemp - 32) * 5) / 9;
-	let currentTemp = document.querySelector("#temp");
-	currentTemp.innerHTML = Math.round(celsiusTemperature);
+	let tempElement = document.querySelector("#temp");
+	let celsiusTemperature = (tempElement - 32) * (5 / 9);
+	tempElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertCelsius);
-
-let celsiusTemperature = null;
 
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", search);
