@@ -51,22 +51,29 @@ function showTemperature(response) {
 	currentTempMin.innerHTML = Math.round(response.data.main.temp_min);
 }
 
-//function showPosition(position) {
-//let lat = position.coords.latitude;
-//let lon = position.coords.longitude;
-//let apiKey = "687530026c0591404564d5611a187195";
-//let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
+function showPosition(position) {
+	let lat = position.coords.latitude;
+	let lon = position.coords.longitude;
+	let apiKey = "687530026c0591404564d5611a187195";
+	let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
 
-//axios.get(apiUrl).then(showTemperature);
-//}
+	axios.get(apiUrl).then(showTemperature);
+}
 
-//function getCurrentPosition() {
-//	navigator.geolocation.getCurrentPosition(showPosition);
-//}
+function getCurrentPosition() {
+	navigator.geolocation.getCurrentPosition(showPosition);
+}
 
-function search(city) {
+function search(event) {
+	event.preventDefault();
+
+	let currentCity = document.querySelector("#city");
+	let searchInput = document.querySelector("#search-city-input");
+	currentCity.innerHTML = `${searchInput.value}`;
+
 	let apiKey = "687530026c0591404564d5611a187195";
 	let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&units=imperial&appid=${apiKey}`;
+
 	axios.get(apiUrl).then(showTemperature);
 }
 
@@ -79,7 +86,7 @@ function handleSubmit(event) {
 function convertCelsius(event) {
 	event.preventDefault();
 	let tempElement = document.querySelector("#temperature");
-	let celsiusTemperature = (tempElement - 32) * (5 / 9);
+	let celsiusTemperature = (fahrenheitTemperature - 32) * (5 / 9);
 	conso(celsiusTemperature);
 	tempElement.innerHTML = Math.round(celsiusTemperature);
 }
@@ -92,7 +99,7 @@ form.addEventListener("submit", search);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertCelsius);
 
-//let button = document.querySelector("button");
-//button.addEventListener("click", getCurrentPosition);
+let button = document.querySelector("button");
+button.addEventListener("click", getCurrentPosition);
 
-//search("New York");
+search("New York");
