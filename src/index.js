@@ -58,6 +58,20 @@ function handleSubmit(event) {
 	search(cityInputElement.value);
 }
 
+function showPosition(position) {
+	let lat = position.coords.latitude;
+	let lon = position.coords.longitude;
+	//let units = "imperial";
+	let apiKey = "687530026c0591404564d5611a187195";
+	let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
+
+	axios.get(apiUrl).then(displayTemperature);
+}
+
+function getCurrentPosition() {
+	navigator.geolocation.getCurrentPosition(showPosition);
+}
+
 function displayFahrenheitTemperature(event) {
 	event.preventDefault();
 	let temperatureElement = document.querySelector("#temp");
@@ -80,6 +94,9 @@ let celsiusTemperature = null;
 
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", handleSubmit);
+
+let button = document.querySelector("button");
+button.addEventListener("click", getCurrentPosition);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
