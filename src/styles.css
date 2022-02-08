@@ -14,17 +14,6 @@
 	padding: 20px 20px 10px 20px;
 }
 
-.button {
-	text-align: center;
-	color: #bbe4e9;
-	background-color: #53a8b6;
-	display: block;
-	margin: 0 auto;
-	padding: 5px 15px;
-	border: 2px solid #5585b5;
-	border-radius: 30px;
-}
-
 .listOne {
 	list-style: none;
 	text-align: center;
@@ -65,14 +54,14 @@
 	font-size: 16px;
 	color: #53a8b6;
 	margin: 10px;
-	display: block;
+	display: inline;
 }
 
 #wind {
 	font-size: 16px;
 	color: #53a8b6;
 	margin: 10px;
-	display: block;
+	display: inline;
 }
 
 .tempContainer {
